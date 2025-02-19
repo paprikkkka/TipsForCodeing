@@ -1,6 +1,6 @@
 # TipsForCodeing
 
-How to edit Readme
+How to edit Readme\
 https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 
 
