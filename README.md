@@ -92,3 +92,29 @@ public static T BinaryFomartterClone<T>(T src)
     }
 }
 ```
+
+### メソッドの呼び出し元を探す
+
+stackTrace.GetFrames()ですべてのスタックトレースを取得
+
+```
+        private bool IsSourceDLL()
+        {
+            // スタックトレースを取得
+            var stackTrace = new StackTrace();
+            // スタックフレームを取得
+            foreach (var frame in stackTrace.GetFrames())
+            {
+                // アセンブリ名を取得
+                var Assembly = frame.GetMethod().Module.Assembly.GetName().Name;
+
+                // DLLでない場合はスキップ
+                if (Assembly != _dllName)
+                    continue;
+
+                // DLLがある場合はtrueを返す
+                return true;
+            }
+            return false;
+        }
+```
