@@ -96,7 +96,7 @@ public static T BinaryFomartterClone<T>(T src)
 ### メソッドの呼び出し元を探す
 
 stackTrace.GetFrames()ですべてのスタックトレースを取得
-
+AppDomainUnloadedException も使える
 ```
         private bool IsSourceDLL()
         {
