@@ -4,12 +4,13 @@
 
 ### Loaded、UnLoaded、IsVisibleChangedイベント
 >Loaded、UnLoaded、IsVisibleChangedの動作順は異なる。
+
 -IsVisibleChangedはいつも最初にCall
 *Loadedする場合の順番：IsVisibleChanged → Loaded in .xaml → Loaded in .xaml.cs
 -UnLoadedする場合の順番：IsVisibleChanged → UnLoaded in .xaml.cs → UnLoaded in .xaml
 
 .xaml.csファイル内
-'''
+```
     public partial class CameraSettingWindow : UserControl
     {
         public CameraSettingWindow(BindableBase pViewModel)
@@ -33,9 +34,9 @@
             Console.WriteLine("CameraSettingWindow_Unloaded"); // UnLoaded時ViewModelより先呼ばれる
         }
     }
-'''
+```
 .xaml内
-'''
+```
 <UserControl x:Class="MimakiPrinterController.Pages.CameraSettingWindow"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -54,4 +55,4 @@
             <i:InvokeCommandAction Command="{Binding Path=UnLoadingCamera}" /> <!-- アンロード時最後で呼ばれる-->
         </i:EventTrigger>
     </i:Interaction.Triggers>
-'''
+```
