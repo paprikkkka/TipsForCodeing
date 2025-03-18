@@ -5,9 +5,9 @@
 ### Loaded、UnLoaded、IsVisibleChangedイベント
 >Loaded、UnLoaded、IsVisibleChangedの動作順は異なる。
 
--IsVisibleChangedはいつも最初にCall
-*Loadedする場合の順番：IsVisibleChanged → Loaded in .xaml → Loaded in .xaml.cs
--UnLoadedする場合の順番：IsVisibleChanged → UnLoaded in .xaml.cs → UnLoaded in .xaml
+- IsVisibleChangedはいつも最初にCall
+* Loadedする場合の順番：IsVisibleChanged → Loaded in .xaml → Loaded in .xaml.cs
+- UnLoadedする場合の順番：IsVisibleChanged → UnLoaded in .xaml.cs → UnLoaded in .xaml
 
 .xaml.csファイル内
 ```
