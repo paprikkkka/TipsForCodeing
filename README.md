@@ -2,6 +2,14 @@
 
 How to edit Readme\
 https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+## visual studio
+
+### 定義へ移動できない対応
++ 現在開いているVisual Studioを閉じる。
++ プロジェクト直下の.slnファイルが置かれているフォルダにアクセス。
++ 隠しファイルを表示する。(Macの場合はComman+Shit+.を押す。）
++ .vsフォルダと.vsconfigファイルの両方を削除
++ Visual Studioを開く
 
 ## Git
 
